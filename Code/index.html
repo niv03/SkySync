@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Interactive Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4 wow fadeIn">Interactive Weather App</h1>
+        <div id="weatherContainer" class="text-center">
+            <div class="mb-3">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+                    <span class="slider"></span>
+                </label>
+                <span class="ml-2">Dark Mode</span>
+            </div>
+            <input type="text" id="cityInput" class="form-control mb-3" placeholder="Enter city..." oninput="suggestCities()">
+            <ul id="suggestedCities" class="list-group"></ul>
+            <button onclick="getWeather()" class="btn btn-primary mt-3 wow fadeInUp">Get Weather</button>
+            <div id="weatherInfo" class="mt-4 wow fadeIn"></div>
+            <div id="map" class="mt-4 wow fadeIn"></div>
+            <canvas id="chart" width="400" height="200" class="mt-4 wow fadeIn"></canvas>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://unpkg.com/smoothscroll/polyfills.js"></script>
+    <script src="https://unpkg.com/smoothscroll/smoothscroll.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
